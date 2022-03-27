@@ -1,0 +1,14 @@
+.site-logo {
+  height: 26px;
+  margin: 1rem;
+  width: 160px;
+}
+
+@media (min-width: 768px) {
+  .site-logo {
+    height: 31px;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    width: 190px;
+  }
+}

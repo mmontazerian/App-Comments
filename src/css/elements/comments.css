@@ -1,0 +1,97 @@
+.comments {
+  display: grid;
+  font-family: "Times New Roman", Times, serif;
+  gap: 15px;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  margin: 0 15px;
+}
+
+.comments .comment-container,
+.comments .header-container {
+  grid-column: col-start / span 12;
+}
+
+/* header css */
+.comments .header-container {
+  align-items: center;
+  border-bottom: 1px solid #f5f5f5;
+  border-top: 1px solid #f5f5f5;
+  display: flex;
+  padding: 20px 0px 20px 15px;
+}
+
+.comments .title {
+  font-size: 24px;
+  font-weight: bold;
+  flex: auto;
+  padding-left: 10px;
+}
+
+.comments .user-name {
+  font-size: 18px;
+  font-weight: bold;
+  padding-left: 15px;
+}
+
+.comments .sort-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.comments .sort-container li {
+  border: 1px solid #f5f5f5;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.comments .count {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 14px;
+  font-weight: bold;
+  padding-left: 15px;
+}
+
+.comments .sort-container ul {
+  margin-left: 15px;
+}
+
+.comments .sort-container li:hover {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.comments .sort-container li.selected {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+/* comments block css */
+.comments .comment-container {
+  border-bottom: 1px solid #f5f5f5;
+  padding-bottom: 15px;
+}
+
+.comments .description {
+  line-height: 20px;
+  padding: 15px 15px;
+}
+
+@media (min-width: 768px) {
+  .comments .comment-container {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    gap: 15px;
+  }
+
+  .comments .comment-container,
+  .comments .header-container {
+    grid-column: col-start 3 / span 6;
+  }
+}
+
+.glyphicon-comment {
+  font-size: 20px;
+  top: 0;
+}
